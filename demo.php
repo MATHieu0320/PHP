@@ -54,7 +54,7 @@ print_r($tableau["notes"]);
 // while ($chiffre !== 10) {
 //     $chiffre = (int) readline("Entrez un chiffre : ");
 // }
-echo "bravo vous etes sortie";
+echo "bravo vous etes sortie" . "\n";
 
 
 $valeurs = [12, 15, 4, 5440, 2];
@@ -77,15 +77,99 @@ $valeurs = [12, 15, 4, 5440, 2];
 //         echo $eleve . " est en " . $niveau . "\n";
 //     }
 // }
-foreach ($valeurs as $key) {
-    echo (int) $key . " \n";
+
+$eleves2 = [
+    "cp" => ["po", "kabute", "dezz"],
+    "ce1" => ["marcus"]
+];
+foreach ($eleves2 as $classe => $Listeleves) {
+    echo "la classe des eleves de " . $classe . "\n ";
+    foreach ($Listeleves as $key) {
+        echo "-$key \n";
+    }
+    echo "\n";
 
 }
-// foreach ($eleves as $classe => $eleve) {
-//     echo $eleve . " est en " . $classe . "\n";
+;
+$Rentre = null;
+$tableau22 = [];
+// while ($Rentre !== "fin") {
+//     $Rentre = readline("Entrer une note || taper le mot fin : ");
+
+//     array_push($tableau22, $Rentre);
+//     print_r($tableau22);
+
+//     // ou 
+
+//     $tableau22[] = (int) $Rentre;
 
 // }
-// ;
+
+// echo "Les numeros : \n";
+// foreach ($tableau22 as $key) {
+//     echo "- $key \n";
+// }
+
+// PHP pas de push mais tableau[] = ()element qu'on push 
 
 
-?>
+
+
+
+$Ouverture1 = readline("Entrer les horaires d'ouverture : ");
+$fermeture1 = readline("Entrer les horaires de fermeture : ");
+
+$RajouterUnCreneau = readline("Voulez vous ajouter un creneau (y/n)");
+
+if ($RajouterUnCreneau == "y") {
+    $Ouverture2 = readline("Entrer les horaires d'ouverture : ");
+    $fermeture2 = readline("Entrer les horaires de fermeture : ");
+    $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
+
+
+    if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1 && $horaireVoulu < $Ouverture2 && $horaireVoulu > $fermeture2) {
+        echo "Magasin Fermé " . " \n";
+
+    } else {
+        echo "Magasin Ouvert " . " \n";
+    }
+} else {
+    echo $Ouverture1;
+    $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
+    if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1) {
+        echo "Magasin Fermé " . " \n";
+
+    } else {
+        echo "Magasin Ouvert " . " \n";
+    }
+
+}
+
+$creneau = [];
+
+// while (true) {
+//     $debut = readline("Heure d'ouverture");
+//     $fin = readline("heure de fermeture");
+//     if ($debut >= $fin) {
+//         echo "Impaussible l heure de debut est superieur a l heure de fin";
+//     } else {
+//         $creneau[] = [$debut, $fin];
+
+
+//         $AutresDf = readline("Voulez vous mettre d' autre horaires(y/n)");
+
+//         if ($AutresDf == "n") {
+//             break;
+//         }
+//     }
+// }
+// $ValeurVoulu = (int) readline("Quelle heure voulez vous savoir si c'est ouvert");
+// $creneauTrouve = false;
+
+// foreach ($creneau as $key) {
+//    if ($h) {
+//     # code...
+//    }
+// }
+// print_r($creneau);
+// ?>
