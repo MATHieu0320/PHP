@@ -116,36 +116,42 @@ $tableau22 = [];
 
 
 
-$Ouverture1 = readline("Entrer les horaires d'ouverture : ");
-$fermeture1 = readline("Entrer les horaires de fermeture : ");
+// $Ouverture1 = readline("Entrer les horaires d'ouverture : ");
+// $fermeture1 = readline("Entrer les horaires de fermeture : ");
 
-$RajouterUnCreneau = readline("Voulez vous ajouter un creneau (y/n)");
+// $RajouterUnCreneau = readline("Voulez vous ajouter un creneau (y/n)");
 
-if ($RajouterUnCreneau == "y") {
-    $Ouverture2 = readline("Entrer les horaires d'ouverture : ");
-    $fermeture2 = readline("Entrer les horaires de fermeture : ");
-    $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
+// if ($RajouterUnCreneau == "y") {
+//     $Ouverture2 = readline("Entrer les horaires d'ouverture : ");
+//     $fermeture2 = readline("Entrer les horaires de fermeture : ");
+//     $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
 
 
-    if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1 && $horaireVoulu < $Ouverture2 && $horaireVoulu > $fermeture2) {
-        echo "Magasin Fermé " . " \n";
+//     if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1 && $horaireVoulu < $Ouverture2 && $horaireVoulu > $fermeture2) {
+//         echo "Magasin Fermé " . " \n";
 
-    } else {
-        echo "Magasin Ouvert " . " \n";
+//     } else {
+//         echo "Magasin Ouvert " . " \n";
+//     }
+// } else {
+//     echo $Ouverture1;
+//     $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
+//     if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1) {
+//         echo "Magasin Fermé " . " \n";
+
+//     } else {
+//         echo "Magasin Ouvert " . " \n";
+//     }
+
+// }
+
+// $creneau = [];
+
+for ($i = 1; $i < 5; $i++) {
+    for ($j = 1; $j <= $i; $i++) {
+        echo "cn";
     }
-} else {
-    echo $Ouverture1;
-    $horaireVoulu = readline("Entrer la valeur ou vous voulez venir");
-    if ($horaireVoulu < $Ouverture1 && $horaireVoulu >= $fermeture1) {
-        echo "Magasin Fermé " . " \n";
-
-    } else {
-        echo "Magasin Ouvert " . " \n";
-    }
-
 }
-
-$creneau = [];
 
 // while (true) {
 //     $debut = readline("Heure d'ouverture");
