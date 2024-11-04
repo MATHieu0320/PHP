@@ -67,24 +67,25 @@ $AUTRES = [10, 20, 30];
 //     echo "cc";
 // }
 
-$insultes = ["pute", "connard", "merde"];
-$phrase = readline("phrase : ");
-// $phrase = readline("Entrez une phrase : ");
+// $insultes = ["pute", "connard", "merde"];
+// $phrase = readline("phrase : ");
+// // $phrase = readline("Entrez une phrase : ");
 
 
-foreach ($insultes as $key) {
+// foreach ($insultes as $key) {
+//     $replace = $key[0] . str_repeat("£", strlen(string: $key) - 1);
+//     $phrase = str_replace($key, $replace, $phrase);
+
+//     echo $key[0];
+// }
+
+// echo $phrase;// php FUNCTION.php
 
 
 
-
-    $replace = str_repeat("£", strlen($key));
-    $phrase = str_replace($key, $replace, $phrase);
+function Bonsoir($nom)
+{
+    echo "Bonsoir " . $nom;
 }
 
-
-
-
-
-// print_r($phrase);
-
-echo $phrase;// php FUNCTION.php
+Bonsoir("Morgan");
