@@ -83,9 +83,60 @@ $AUTRES = [10, 20, 30];
 
 
 
-function Bonsoir($nom)
+$prenom = "doe";
+
+function Bonsoir($nom = null)
 {
-    echo "Bonsoir " . $nom;
+    global $prenom;
+    if ($nom == null) {
+        return "bjr";
+    }
+    return "Bonsoir " . $nom . "\n" . "$prenom";
+}
+;
+
+$salutation = Bonsoir("Morgan");
+
+function Repondre($phrase)
+{
+    $reponse = readline($phrase);
+
+    if ($reponse == "o") {
+        return true;
+    } else if ($reponse == "n") {
+        return false;
+    } else {
+        Repondre($phrase);
+    }
+}
+// $resultat = Repondre("Voulez vous continuer");
+
+// var_dump($resultat);
+
+
+function demander_crenau($phrase)
+{
+
+    $tableau = [];
+
+    $ouverture = readline($phrase . " d'ouverture : ");
+    $fermeture = readline($phrase . " de fermeture : ");
+
+
+    $tableau[] = [$ouverture, $fermeture];
+    if ($ouverture > $fermeture) {
+        echo "C'est horaires manque de logique \n";
+        demander_crenau("Veullez entre votre creneau");
+    } else {
+        // echo "L'heure d'ouverture " . $ouverture . "h \n";
+        // echo "L'heure de'fermeture " . $fermeture . "h ";
+        return [$ouverture, $fermeture];
+    }
 }
 
-Bonsoir("Morgan");
+
+$creneau = demander_crenau("Veullez entre votre creneau");
+
+
+print_r($creneau);
+
