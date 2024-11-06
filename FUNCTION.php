@@ -1,5 +1,5 @@
 <?php
-
+// declare(strict_types=1);
 // $valeurs = dmeonstration($var, "1254");
 
 // void renvoie rien en retour
@@ -114,29 +114,56 @@ function Repondre($phrase)
 // var_dump($resultat);
 
 
-function demander_crenau($phrase)
+function demander_crenau(string $phrase = "Veullez entre votre creneau"): array
 {
 
-    $tableau = [];
+    (array) $tableau = [];
 
     $ouverture = readline($phrase . " d'ouverture : ");
     $fermeture = readline($phrase . " de fermeture : ");
 
 
     $tableau[] = [$ouverture, $fermeture];
-    if ($ouverture > $fermeture) {
+
+    if ($ouverture > $fermeture || $ouverture < 0 || $fermeture > 23) {
+
         echo "C'est horaires manque de logique \n";
         demander_crenau("Veullez entre votre creneau");
+
     } else {
         // echo "L'heure d'ouverture " . $ouverture . "h \n";
         // echo "L'heure de'fermeture " . $fermeture . "h ";
+
         return [$ouverture, $fermeture];
     }
+
 }
 
+// $creneau = demander_crenau("Veullez entre votre creneau");
 
-$creneau = demander_crenau("Veullez entre votre creneau");
+// print_r($creneau);
+
+// function agelimite()
+// {
+//     while (true) {
+//         $age = readline("Entrez Votre age : ");
+
+//         if ($age >= 18 && $age <= 35) {
+//             echo "Vous avez l autorisation";
+//             break;
+//         } else {
+//             echo "Impaussible de passer cette etape sans un age < 35 ou > a 18 \n";
+//         }
+//     }
+// }
+
+// agelimite();
 
 
-print_r($creneau);
+
+
+
+
+
+
 
