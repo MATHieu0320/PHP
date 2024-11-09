@@ -1,5 +1,3 @@
-salut
-
 <?php
 $prenom = "Mathieu";
 $nom = "def";
@@ -147,11 +145,7 @@ $tableau22 = [];
 
 // $creneau = [];
 
-for ($i = 1; $i < 5; $i++) {
-    for ($j = 1; $j <= $i; $i++) {
-        echo "cn";
-    }
-}
+// f
 
 // while (true) {
 //     $debut = readline("Heure d'ouverture");
@@ -178,4 +172,3 @@ for ($i = 1; $i < 5; $i++) {
 //    }
 // }
 // print_r($creneau);
-// ?>

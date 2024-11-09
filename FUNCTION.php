@@ -114,7 +114,9 @@ function Repondre($phrase)
 // var_dump($resultat);
 
 
-function demander_crenau(string $phrase = "Veullez entre votre creneau"): array
+
+// pts interogation pour dire null ou string
+function demander_crenau(?string $phrase = "Veullez entre votre creneau"): ?array
 {
 
     (array) $tableau = [];
@@ -138,7 +140,7 @@ function demander_crenau(string $phrase = "Veullez entre votre creneau"): array
     }
 
 }
-
+demander_crenau("Veullez entre votre creneau");
 // $creneau = demander_crenau("Veullez entre votre creneau");
 
 // print_r($creneau);
