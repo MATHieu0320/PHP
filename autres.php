@@ -2,7 +2,7 @@
 
 // include fait le reste
 // require fait planter et joue pas
-$title = "Accueil";
+$title = "Autres";
 require "index.php";
 
 
