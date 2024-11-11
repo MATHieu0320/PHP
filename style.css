@@ -5,3 +5,7 @@ body {
   background-color: aqua;
   color: gold;
 }
+.none {
+  background-color: blue;
+  text-decoration: none;
+}

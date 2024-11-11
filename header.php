@@ -1,12 +1,30 @@
 <?php
+
+// function Serveur(string $index): string
+// {
+//     if ($index === $_SERVER["SCRIPT_NAME"]) {
+//         return "active";
+//     }
+//     return "";
+
+// }
+// ;
 $title = "Header";
 $tape = "active";
+function htm($til, $ted)
+{
+    return <<<HTML
+<li>
+    <a href="$til">$ted</a>
+</li>
+HTML;
+}
+
 require "index.php";
 
-echo "cc"
-
-
-    ?>
+echo "cc";
+$phone = "061454740";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +36,17 @@ echo "cc"
 
 <body>
     <h1 <?php if ($tape === "active"): ?> class="active" <?php endif ?>>Test</h1>
+
+    <h2 class="<?= Serveur("/header.php"); ?>">cc</h2>
+
+    <div>
+        <h4>pokemon</h4>
+
+
+
+
+    </div>
+
 </body>
 
 </html>
