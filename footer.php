@@ -17,14 +17,12 @@
             <ul>
                 <li><a href="index.php" class="<?php if ($_SERVER['SCRIPT_NAME'] === '/index.php')
                     echo 'active'; ?>">d</a></li>
-
-
                 <li>
-                    <a href=" header.php" class="<?php Serveur("header.php"); ?>">header
-                </li>
+                <li><a href="header.php" class="<?= Serveur("/header.php"); ?>">header</a></li>
                 <li>
-                    <a href="autres.php" class="<?php Serveur("autres.php"); ?>">autres
-                </li>
+                <li><a href="autres.php" class="<?= Serveur("/autres.php"); ?>">d</a></li>
+                <li>
+                    <h2 class=" <?= Serveur("/header.php"); ?>">cc</h2>
             </ul>
         </div>
     </div>
